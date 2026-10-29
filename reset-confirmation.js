@@ -1,0 +1,12 @@
+let confirmAction,opener,fromDrawer=false,oldOverflow='',recoveryOnly=false;
+const wired=new WeakSet();
+const dialog=()=>document.getElementById('reset-dialog');
+function wire(d){if(wired.has(d))return;wired.add(d);d.addEventListener('cancel',e=>{e.preventDefault();resetConfirmation.cancel();});d.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const items=[...d.querySelectorAll('button')].filter(b=>!b.hidden&&!b.disabled),first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});d.querySelector('[data-reset-reload]').onclick=()=>location.reload();}
+function outcome(status){const d=dialog();if(!d)return;const box=d.querySelector('.reset-result');box.hidden=false;box.textContent=status==='not-persisted'?'The reset was not saved. Your current workspace remains available. You can cancel or try again.':status==='persisted-incomplete'?'The reset was saved, but the screen could not finish updating. Reload the workspace to continue. Do not reset again.':'JAW could not confirm whether the reset was saved. Reload the workspace to inspect the saved state before trying anything else.';
+ const recover=status!=='not-persisted';recoveryOnly=recover;wire(d);d.querySelector('[data-action=confirm-reset]').hidden=recover;d.querySelector('[data-action=cancel-reset]').hidden=recover;d.querySelector('[data-reset-reload]').hidden=!recover;if(!d.open)d.showModal();box.focus();}
+export const resetConfirmation={
+ mount(confirm){confirmAction=confirm;wire(dialog());},
+ open(trigger){recoveryOnly=false;opener=trigger;fromDrawer=!!document.querySelector('.navigation-drawer[open]');document.querySelector('.navigation-drawer[open] [data-navigation-close]')?.click();oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';const d=dialog();d.querySelector('.reset-result').hidden=true;for(const b of d.querySelectorAll('[data-action]'))b.hidden=false;d.querySelector('[data-reset-reload]').hidden=true;d.showModal();d.querySelector('[data-action=cancel-reset]').focus();},
+ cancel(){if(recoveryOnly)return;dialog()?.close();document.body.style.overflow=oldOverflow;if(fromDrawer)document.querySelector('.navigation-toggle')?.click();if(opener?.isConnected)opener.focus({preventScroll:true});},
+ confirm(){const result=confirmAction();if(result.status==='complete'){document.body.style.overflow=oldOverflow;return;}outcome(result.status);}
+};

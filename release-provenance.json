@@ -1,14 +1,10 @@
 {
-  "release": "JAW-Integrated-Presentation-20261026-r1",
-  "candidate": "Onboarding-S2-S3-r1",
-  "sourceRevisionSHA256": "00a6f46c67eaf705304a8cfb021c65d2dadc977806a2c3fde8932c81de40b189",
-  "runtimeTreeSHA256": "6fabcece5138d6c6597637de96582fed7ea4e5869d442c1b40b7872ee8b9e319",
-  "releaseArchiveSHA256": "ce883832f0f3d9a7b86dfc6a0c3f2d0933558a8e3db81790bfe62c6188c75960",
-  "historicalRepository": "https://github.com/kstorace/jaw-w9-d2-prototype",
-  "historicalCommit": "cddaa29e47ab2324571e49284d7cc7a435cce2e3",
-  "tag": "integrated-presentation-20261026-r1",
+  "release": "integrated-presentation-20261029-privacy-r3",
+  "candidate": "Privacy-AI-Use-r3",
+  "sourceRevisionSHA256": "b64d7c761a9ee61ec09d2e83f8b2d4407326259b7ca0002ff58180a0606d5acd",
+  "runtimeTreeSHA256": "84805a889999a0d8eb63d1a80170a85eaf69b46227592dca59a7ec783a95d38f",
   "runtimeFiles": {
-    "app.js": "801fc042263b72672e43f70b57329150b04bab3a70e287be90e667b27e46f6a0",
+    "app.js": "f667e5f7c926f46ef2b69d8d4776b6ff187ee136cb14b477d92010b26b176b6d",
     "application-scroll.js": "f0faf706f21398b4cdf82105635dbfb7f952d71a516812f435d13a0ef2941275",
     "application-state-view.js": "51f0baac03a7f2bdc43a02f5d8118540bebb19ea223716bc65bd81f5fabc7ea1",
     "application-workspace.css": "d81ee1c4625364aee50e0c94e1ba85f874e5c3ec3ed1f64e923393d8be191361",
@@ -51,9 +47,9 @@
     "evidence-import.css": "3158c53d89cc63194f25fd20dc4cb861523fd409cc17b9abed0a1f5805f52910",
     "fixtures.json": "3efe73b9d5045210dab699d8044b6718dee1f81d7433409de34beb69cf30dd68",
     "foundations.css": "d6bfb2997ef4807496df48452299551660cbbacc5311f5f568adfed321244b5b",
-    "index.html": "253147caccbe80d8859d552a8b6febd9f7d5ab5891179ab6e16f9b6ef2925c27",
+    "index.html": "61a0712bdb4a72566191f8d683694867a741bc51281d916dc1495d0e423a3bb1",
     "model.js": "b2dd638c9c3b63cf51c78232e408146dad01ccdf475a01ada396efca0af5a340",
-    "navigation-shell.js": "a59bdf1f07d145174da0120fdc66c640585c829a141adade1931f7820f16e2d0",
+    "navigation-shell.js": "01818f29c164b53855d462ce4ce16bd1ab215164f06a98a02772df4bcfca9e02",
     "navigation.css": "a79823584d3e8b0959daa5fc302f8692c3c349e7801c68dec9d358fd05792544",
     "onboarding-feedback.js": "c33ee5bb8b5e3f14df2cb20151901f91f3406111cad538ddcb45ba7d7ce03153",
     "onboarding-reconciliation.css": "0bb5bd7fcf52d62ff864fe9d869b6a4f8800a775fcbfc8170c255b27724bce4b",
@@ -62,9 +58,14 @@
     "practical-preferences.js": "2fa5afafe4097a1b5a7aed5aa27f2c5a3c402ff6dd30ca2f454a3059e44be8cd",
     "pre-onboarding.css": "2823e693990033d8dccadc015cdc672cf3ff7e2deec65ce0feae6a2926334358",
     "pre-onboarding.html": "bde8362ef24c91ac8479f0c1652c08f4d4e16aae27c8f63c884bf6eadf22b1d7",
+    "privacy-navigation.js": "5dc8910a1337de461ee200c5ef2d7c2589c49091265803ba4254735e88da28a6",
+    "privacy-view.js": "6eeb433e27bcb5b249c07cf7e6062ad877aaa23301d6687112182658c83a3e25",
+    "privacy.css": "2192cab46ac2dea0e4143f98d788a1eec10e92991fb52241a80129ce2fcfa6f0",
     "profile-finishing.css": "5854fac9cc90886976a85b35d06c04f9377b22471911b7798c8ac5ad01d016c3",
     "profile-scroll.js": "f5a055ab6495e7ec929fc5d5b6115028310ab6b951c4e402bbeb56ec296cfc2d",
     "profile-state.js": "b02a3a3ef7f08db768c6406e4888dec649bec5860d706b08526ec38dd77f3e93",
+    "reset-confirmation.js": "3323f91f3e9b68511d58eb8c4b90f450f91e2704ec64a22bc90956110df103e4",
+    "reset-operation.js": "e9bf60cfbcd3f1be37d0c6bc9d9e36fdbffcab4880ed8a4af4acd5f9c7cbea3d",
     "styles.css": "d7cb479a707b02406aaab539dec5fbd92629c7f8b0adbcd53880a27f3fba3952",
     "tracker-listing.css": "166ef10e46ad2f5636a9937b8dd811c2cb4a28e0bb6747f7bb51c3aa31b53280",
     "tracker-listing.js": "2a1e13bc4730a313f92a192772d7bf96cda2f146da5e3d99e1e86076081e1419",
@@ -75,5 +76,14 @@
     "vacancy-summaries.js": "724f8dc90cebc4135e08d75b9be8910994319c1439b7923a53fd0f5b52b5be56",
     "visual-finishing.js": "ce5bbf7d3fd7c138a833022b4b52aa0a4f258aea7e716054b0b2971fa9644ce3",
     "workspace-feedback.js": "bb03036b13c144c34ea8eb2468764c7b4693ec5d909728c0954d68710750d907"
-  }
+  },
+  "previousPublication": {
+    "candidate": "Onboarding-S2-S3-r1",
+    "sourceRevisionSHA256": "00a6f46c67eaf705304a8cfb021c65d2dadc977806a2c3fde8932c81de40b189",
+    "runtimeTreeSHA256": "6fabcece5138d6c6597637de96582fed7ea4e5869d442c1b40b7872ee8b9e319",
+    "commit": "68af94c3d5fec1e6c2234667a79b038c42f8aed7",
+    "tag": "integrated-presentation-20261026-r1"
+  },
+  "publicationAuthority": "05c — accepted current demonstrator publication authorised 29 October 2026",
+  "boundary": "DEC-026 course demonstrator; no production controls implied"
 }

@@ -47,7 +47,7 @@ function targetForHash() {
   const container = document.getElementById(section);
   return section && section !== 'overview' && container
     ? container.querySelector('h1,h2,h3') || container
-    : document.querySelector('main .hero h1') || document.querySelector('main');
+    : document.querySelector('main .privacy-page h1, main .hero h1') || document.querySelector('main');
 }
 function arrive() {
   measureHeader();
@@ -122,6 +122,8 @@ function activate(event) {
 }
 
 export const navigationShell = {
+  capture:remember,
+  closeForNavigation:()=>closeDrawer('navigation'),
   mount() {
     if (drawer?.open) closeDrawer('navigation');
     currentKey = workspaceKey(location.hash);
